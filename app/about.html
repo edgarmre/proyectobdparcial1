@@ -1,0 +1,67 @@
+<body>
+    
+    
+        <video-list [videos]="videos">
+           
+            </video-list>    
+    
+    
+    
+    
+    <th>  REGISTROS: {{videos.length}} </th>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            
+                <th>NUMERO DE TELEFONO</th>
+                <th>NOMBRE</th>
+                <th>DIRECCION</th>
+                <th>FECHA DE PAGO</th>
+                <th>TIPO DE SERVICIO</th>
+                <th>TARIFA MENSUAL</th>
+                <th>SERVICIOS EXTRA</th>
+                <th>PRECIO LARGA DISTANCIA</th>
+                </tr>
+               
+                </thead>
+                <tbody>
+                    <tr *ngFor="#v of videos" (click)="onSelect(v)">
+                      
+                        <td> {{v.num}} </td>
+                        <td> {{v.nom}} </td>    
+                     <td> {{v.dire}} </td>
+                         <td> {{v.fepag}} </td>
+                          <td> {{v.tser}} </td>
+                           <td> {{v.tarmen}} </td>
+                            <td> {{v.serext}} </td>
+                             <td> {{v.preld}} </td>
+                        
+                        </tr>
+                        </tbody>
+                        
+                        
+
+
+                        
+                        
+                        </table>
+                        
+
+<div class="panel panel-primary" *ngIf="selectedVideo">
+      <div class="panel-heading"> <h4> Detalles: </h4> </div>
+
+      <div class="panel-body">
+            <b>ID: </b> {{selectedVideo.id}} <br>
+            <b>NUMERO TELEFONO: </b> {{selectedVideo.num}}<br>
+            <b>NOMBRE: </b> {{selectedVideo.nom}} <br>
+            <b>DIRECCION: </b> {{selectedVideo.dire}} <br>
+            <b>FECHA PAGO: </b> {{selectedVideo.fepag}}<br>
+            <b>TIPO SERVICIO: </b> {{selectedVideo.tser}}<br>
+            <b>TARIFA MENSUAL: </b> {{selectedVideo.tarmen}}<br>
+            <b>SERVICIOS EXTRA: </b> {{selectedVideo.serext}}<br>
+            <b>PRECIO LARGA DISTANCIA: </b> {{selectedVideo.preld}}<br>
+    </div>
+    </div>
+                        
+</body>

@@ -1,0 +1,65 @@
+<body>
+      
+<div class="container">
+<div class="jumbotron">
+<header>
+<section>
+<img class="img-thumbnail" src="./logo.png" width="280" height="200"/>
+</section>
+<article id='login'>
+
+<form class="form-inline" role="form">
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="text" class="form-control" placeholder="Ingresa email" #txtNum1>
+</div>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" placeholder="Ingresa password" #txtNum2>
+</div>
+<button (click)="calcular(txtNum1.value,txtNum2.value)" type="button" class="btn btn-primary  btn-sm">Acceder</button>
+</form>
+
+<div id='celda'> USUARIO: {{logue}} </div>
+</article>    
+</header>
+</div>
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li role="presentation">
+                        <a [routerLink]="['About']">COMPRAS</a>
+                        </li>
+                        <li role="presentation">
+                        <a [routerLink]="['Examen']">MI CARRITO</a>
+                        </li>
+                        <li role="presentation">
+                        <a [routerLink]="['Clientes']">BUSCAR</a>                      
+                        </li>    
+                        <li role="presentation">
+                        <a [routerLink]="['D']">CLIENTES</a>
+                        </li>
+                        <li role="presentation">
+                        <a [routerLink]="['E']">PROJECTS</a>
+                        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Crear Cuenta</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
+    </ul>
+  </div>
+</nav>
+      
+                        
+                        <main>
+                            <router-outlet> </router-outlet>
+                            </main>                        
+                            
+</div>
+
+                            </body>
+                            
